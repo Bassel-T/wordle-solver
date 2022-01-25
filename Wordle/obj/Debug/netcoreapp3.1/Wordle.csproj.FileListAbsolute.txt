@@ -1,0 +1,13 @@
+C:\Users\sool1\source\repos\Wordle\Wordle\bin\Debug\netcoreapp3.1\Wordle.exe
+C:\Users\sool1\source\repos\Wordle\Wordle\bin\Debug\netcoreapp3.1\Wordle.deps.json
+C:\Users\sool1\source\repos\Wordle\Wordle\bin\Debug\netcoreapp3.1\Wordle.runtimeconfig.json
+C:\Users\sool1\source\repos\Wordle\Wordle\bin\Debug\netcoreapp3.1\Wordle.runtimeconfig.dev.json
+C:\Users\sool1\source\repos\Wordle\Wordle\bin\Debug\netcoreapp3.1\Wordle.dll
+C:\Users\sool1\source\repos\Wordle\Wordle\bin\Debug\netcoreapp3.1\Wordle.pdb
+C:\Users\sool1\source\repos\Wordle\Wordle\obj\Debug\netcoreapp3.1\Wordle.csprojAssemblyReference.cache
+C:\Users\sool1\source\repos\Wordle\Wordle\obj\Debug\netcoreapp3.1\Wordle.AssemblyInfoInputs.cache
+C:\Users\sool1\source\repos\Wordle\Wordle\obj\Debug\netcoreapp3.1\Wordle.AssemblyInfo.cs
+C:\Users\sool1\source\repos\Wordle\Wordle\obj\Debug\netcoreapp3.1\Wordle.csproj.CoreCompileInputs.cache
+C:\Users\sool1\source\repos\Wordle\Wordle\obj\Debug\netcoreapp3.1\Wordle.dll
+C:\Users\sool1\source\repos\Wordle\Wordle\obj\Debug\netcoreapp3.1\Wordle.pdb
+C:\Users\sool1\source\repos\Wordle\Wordle\obj\Debug\netcoreapp3.1\Wordle.genruntimeconfig.cache
