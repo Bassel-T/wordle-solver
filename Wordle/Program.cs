@@ -2,6 +2,7 @@
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Wordle {
 	class Program {
@@ -33,7 +34,7 @@ start:
 
 				if (greens.Where(x => x).Count() != 4) {
 					// Print random, possible words
-					Console.WriteLine($"Some possible guesses include: {possible[rand.Next(0, possible.Count)]}, {possible[rand.Next(0, possible.Count)]}, {possible[rand.Next(0, possible.Count)]}, {possible[rand.Next(0, possible.Count)]}, {possible[rand.Next(0, possible.Count)]}.");
+					Console.WriteLine($"Some acceptable guesses by Wordle include: {possible[rand.Next(0, possible.Count)]}, {possible[rand.Next(0, possible.Count)]}, {possible[rand.Next(0, possible.Count)]}, {possible[rand.Next(0, possible.Count)]}, {possible[rand.Next(0, possible.Count)]}.");
 				} else {
 					// Print word that gives best chance of final letter
 					// i.e. right, sight, might possible, print something like "Smart"
@@ -58,6 +59,11 @@ start:
 					"Type [stop] to exit.");
 				input = Console.ReadLine();
 
+				while (input.Length != 5 && !input.StartsWith('[')) {
+					Console.WriteLine("The input has to be five characters long. Try again.");
+					input = Console.ReadLine();
+                }
+
 				if (input == "[print]") {
 					// Print all possible words
 					possible.ForEach(x => Console.WriteLine(x));
@@ -74,12 +80,22 @@ start:
 					return;
 				}
 
+				if (input.StartsWith('[')) {
+					Console.WriteLine("Invalid command.");
+					continue;
+                }
+
 				greens = new bool[5];
 
 				// Get website's output for guess
 				Console.WriteLine("What was the result? Write B for black, Y for yellow, G for green.\n" +
 					"(For example: BBYGG, YBBGG, YYBYY, ...)");
 				result = Console.ReadLine().ToUpper();
+
+				while (!Regex.IsMatch(result, @"^[BYG]{5}$")) {
+					Console.WriteLine("That isn't a valid input. Try again.");
+					result = Console.ReadLine().ToUpper();
+                }
 
 				// Analyze what letters are correct
 				for (int i = 0; i < 5; ++i) {
