@@ -57,7 +57,7 @@ start:
 					"Alternatively, type [print] to see all possible answers.\n" +
 					"Type [start] to start over.\n" +
 					"Type [stop] to exit.");
-				input = Console.ReadLine();
+				input = Console.ReadLine().ToLower();
 
 				while (input.Length != 5 && !input.StartsWith('[')) {
 					Console.WriteLine("The input has to be five characters long. Try again.");
